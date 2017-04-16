@@ -9,14 +9,14 @@ install:
 	#get the latest stable version of node.js or io.js
 	- ps:	Install-Product	node $env:nodejs_version
 	#	install modules
-	-npm install
+	- npm install
 
 test_script:
 	#output useful info for debugging
-	-node --version
-	-npm --version
+	- node --version
+	- npm --version
 	# run tests
-	-npm test
+	- npm test
 
 #don't actually build
 build: off
