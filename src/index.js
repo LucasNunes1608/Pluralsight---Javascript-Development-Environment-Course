@@ -1,3 +1,5 @@
+import './index.css';
+
 import {getUsers, deleteUser} from './api/userApi';
 
 // Populate table of users via API call
@@ -28,6 +30,7 @@ getUsers().then(result => {
 			deleteUser(element.attributes["data-id"].value);
 			const row = element.parentNode.parentNode;
 			row.parentNode.removeChild(row);
+			
 		};
 	});
 });
